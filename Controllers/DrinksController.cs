@@ -8,47 +8,43 @@ using Microsoft.AspNetCore.Mvc;
 namespace burgershack_c.Controllers
 {
     [Route("api/[controller]")]
-    public class BurgersController : Controller
+    public class DrinksController : Controller
     {
         //AGAIN VERY BAD!!!!!!
-        public List<Burger> Burgers = Program.Burgers;
+        public List<Drink> Drinks = Program.Drinks;
 
         // GET api/values
         [HttpGet]
-        public IEnumerable<Burger> Get()
+        public IEnumerable<Drink> Get()
         {
-            return Burgers;
+            return Drinks;
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public Burger Get(int id)
+        public Drink Get(int id)
         {
-            return Burgers.FirstOrDefault(b => b.Id == id);
+            return Drinks.FirstOrDefault(b => b.Id == id);
         }
 
         // POST api/values
         [HttpPost]
-        public IEnumerable<Burger> Post([FromBody]Burger burger)
+        public IEnumerable<Drink> Post([FromBody]Drink drink)
         {
-            Burgers.Add(burger);
-            return Burgers;
+            Drinks.Add(drink);
+            return Drinks;
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]String value)
+        public void Put(int id, [FromBody]string value)
         {
-            Burgers.FirstOrDefault(b => b.Id == id);
-            
         }
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            Burgers.Remove(Burgers.FirstOrDefault(b => b.Id == id));
-            Get();   
         }
     }
 }

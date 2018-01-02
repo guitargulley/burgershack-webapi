@@ -27,7 +27,30 @@ namespace burgershack_c
                     Description = "Straight up with cheese, (Choose One: Provolone, Gouda, Munster, Swiss, Cheddar, Merican)",
                     Price = 10.99 } };
 
-
+        public static List<Drink> Drinks = new List<Drink>() {
+            new Drink() {
+                    Id = 1,
+                    Name = "Soda",
+                    Description = "Your choice between Pepsi and Coke products",
+                    Price = 2.00 },
+                new Drink() {
+                    Id = 2,
+                    Name = "Water",
+                    Description = "Water gathered from a local mountain stream",
+                    Price = 3.00 } 
+        };
+        public static List<Side> Sides = new List<Side>() {
+            new Side() {
+                    Id = 1,
+                    Name = "French Fries",
+                    Description = "Thinly sliced and fried to perfection",
+                    Price = 2.50 },
+                new Side() {
+                    Id = 2,
+                    Name = "Steak Fries",
+                    Description = "Thick cut potatoes and slightly fried",
+                    Price = 2.50 } 
+        };
         public static void Main(string[] args)
         {
             BuildWebHost(args).Run();
